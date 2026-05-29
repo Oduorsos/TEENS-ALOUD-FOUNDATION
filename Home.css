@@ -1212,11 +1212,12 @@ header{
 
 /* =========================================
 RESPONSIVENESS
-CLEAN & OPTIMIZED
+ONLY FIXING SIZE, PADDING & OVERFLOW ISSUES
+WITHOUT REMOVING YOUR EXISTING DESIGNS
 ========================================= */
 
 /* =========================================
-LAPTOPS & LARGE TABLETS
+LAPTOPS
 ========================================= */
 
 @media screen and (max-width:1200px){
@@ -1233,9 +1234,13 @@ LAPTOPS & LARGE TABLETS
         font-size:3.5rem;
     }
 
-    .program-card{
-        min-width:calc(50% - 15px);
-        max-width:calc(50% - 15px);
+    .founder-card{
+        gap:35px;
+    }
+
+    .director-mini-image img{
+        width:200px;
+        height:200px;
     }
 
 }
@@ -1246,14 +1251,26 @@ TABLETS
 
 @media screen and (max-width:992px){
 
+    html,
+    body{
+        overflow-x:hidden;
+        width:100%;
+    }
+
+    section{
+        padding:80px 6%;
+    }
+
     /* NAVBAR */
 
     .navbar{
-        padding:14px 22px;
+        width:100%;
+        padding:14px 25px;
     }
 
     .menu-btn{
-        display:flex;
+        display:block;
+        z-index:10001;
     }
 
     .nav-btn,
@@ -1265,14 +1282,13 @@ TABLETS
         position:fixed;
         top:85px;
         right:-100%;
-        width:280px;
-        height:auto;
-        background:#fff;
+        width:260px;
+        background:white;
         flex-direction:column;
         align-items:flex-start;
-        gap:22px;
-        padding:35px 25px;
-        border-radius:24px;
+        gap:20px;
+        padding:30px 25px;
+        border-radius:20px;
         box-shadow:0 15px 40px rgba(0,0,0,0.12);
         transition:0.4s ease;
         z-index:9999;
@@ -1285,32 +1301,56 @@ TABLETS
     /* HERO */
 
     .hero{
-        padding-top:150px;
+        padding-top:140px;
         min-height:100vh;
     }
 
+    .hero-content{
+        width:100%;
+        max-width:100%;
+        padding:0 10px;
+    }
+
     .hero h1{
-        font-size:3rem;
-        line-height:1.2;
+        font-size:2.9rem;
     }
 
     .hero p{
         font-size:1rem;
+        line-height:1.8;
     }
 
     /* ABOUT */
 
     .about{
         grid-template-columns:1fr;
-        gap:50px;
         text-align:center;
+        gap:40px;
     }
 
     .about img{
         width:100%;
     }
 
-    /* VISION & MISSION */
+    /* LEADERSHIP */
+
+    .founder-card{
+        flex-direction:column;
+        text-align:center;
+        padding:35px 25px;
+    }
+
+    .director-mini-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .director-mini-image img{
+        width:220px;
+        height:220px;
+    }
+
+    /* VISION */
 
     .vision-mission-container{
         grid-template-columns:1fr;
@@ -1318,12 +1358,8 @@ TABLETS
 
     /* VALUES */
 
-    .values-container{
+    .value-grid{
         grid-template-columns:1fr 1fr;
-    }
-
-    .value-card{
-        padding:30px 25px;
     }
 
     /* PROGRAMS */
@@ -1333,90 +1369,83 @@ TABLETS
         max-width:100%;
     }
 
-    .program-arrow{
-        width:45px;
-        height:45px;
-        font-size:20px;
-    }
-
-    /* LEADERSHIP */
-
-    .founder-card,
-    .director-mini-card,
-    .acted-mini-card{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .founder-image img,
-    .director-mini-image img,
-    .acted-mini-image img{
-        width:100%;
-        max-width:320px;
-    }
-
     /* TESTIMONIALS */
 
     .testimonial-container{
         flex-direction:column;
     }
 
-    .testimonial-card{
-        max-width:100%;
-    }
-
 }
 
 /* =========================================
-MOBILE DEVICES
+MOBILE
 ========================================= */
 
 @media screen and (max-width:768px){
 
-      *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-      }
-      
-      html,
-      body{
-          width:100%;
-          overflow-x:hidden;
-      }
+    html,
+    body{
+        overflow-x:hidden;
+        width:100%;
+    }
+
+    *{
+        max-width:100%;
+    }
 
     section{
-        padding:75px 5%;
+        padding:70px 5%;
     }
 
     /* NAVBAR */
 
-    .navbar{
-        width:94%;
-        border-radius:18px;
+    header{
+        width:100%;
     }
 
-    .logo h2{
-        font-size:1.1rem;
+    .navbar{
+        width:100%;
+        padding:12px 18px;
     }
 
     .logo-img{
-        height:58px;
+        height:55px;
     }
 
     .nav-links{
-        width:240px;
-        top:80px;
+        width:220px;
+        top:78px;
+        right:-120%;
+        padding:25px 20px;
+    }
+
+    .nav-links.active{
+        right:10px;
     }
 
     /* HERO */
 
     .hero{
-        text-align:center;
+        width:100%;
+        min-height:100vh;
+        padding:130px 20px 70px;
+    }
+
+    .hero-slider,
+    .slide,
+    .slide img{
+        width:100%;
+        height:100%;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:100%;
     }
 
     .hero h1{
-        font-size:2.3rem;
+        font-size:2.2rem;
+        line-height:1.3;
     }
 
     .hero p{
@@ -1426,92 +1455,131 @@ MOBILE DEVICES
 
     .hero-buttons{
         flex-direction:column;
-        gap:18px;
+        align-items:center;
+        width:100%;
     }
 
     .btn{
-        width:220px;
+        width:100%;
+        max-width:320px;
         text-align:center;
     }
 
-    /* SECTION TITLES */
+    /* TITLES */
+
+    .section-title{
+        margin-bottom:45px;
+    }
 
     .section-title h2{
         font-size:2rem;
     }
 
-    .section-title p{
-        font-size:0.95rem;
-    }
-
     /* ABOUT */
+
+    .about{
+        gap:30px;
+    }
 
     .about-text h3{
         font-size:1.8rem;
     }
 
+    /* LEADERSHIP */
+
+    .leadership-section{
+        padding:80px 5%;
+    }
+
+    .founder-card,
+    .director-mini-card,
+    .acted-mini-card{
+        width:100%;
+        padding:28px 20px;
+    }
+
+    .founder-image img,
+    .director-mini-image img{
+        width:100%;
+        max-width:280px;
+        height:auto;
+    }
+
+    .acted-mini-image img{
+        width:120px;
+        height:120px;
+    }
+
+    .founder-content h3{
+        font-size:1.8rem;
+    }
+
+    /* DIRECTORS */
+
+    .directors-grid{
+        grid-template-columns:1fr;
+    }
+
+    .acted-grid{
+        grid-template-columns:1fr;
+    }
+
     /* VALUES */
 
-    .values-container{
+    .value-grid{
         grid-template-columns:1fr;
     }
 
     .value-card{
         width:100%;
+        padding:30px 22px;
+    }
+
+    /* SUBS */
+
+    .SUB-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* PROGRAMS */
+
+    .program-slider{
+        gap:10px;
+    }
+
+    .program-card{
+        min-width:100%;
+        max-width:100%;
+        padding:30px 22px;
+    }
+
+    .program-arrow{
+        width:42px;
+        height:42px;
+        font-size:18px;
     }
 
     /* IMPACT */
 
     .impact-grid{
         grid-template-columns:1fr 1fr;
-        gap:20px;
+        gap:18px;
     }
 
     .impact-box{
-        padding:30px 20px;
+        padding:25px 18px;
     }
 
     .impact-box h3{
         font-size:2rem;
     }
 
-    /* PROGRAMS */
-
-    .program-card{
-        padding:30px 22px;
-    }
-
-    .program-card h3{
-        font-size:1.4rem;
-    }
-
-    .program-card p{
-        font-size:0.95rem;
-    }
-
-    .program-arrow{
-        position:absolute;
-        top:50%;
-        transform:translateY(-50%);
-    }
-
-    .prev-program{
-        left:-5px;
-    }
-
-    .next-program{
-        right:-5px;
-    }
-
     /* TESTIMONIALS */
 
     .testimonial-card{
-        padding:35px 22px;
-    }
-
-    .testimonial-card img{
-        width:100px;
-        height:100px;
+        width:100%;
+        max-width:100%;
+        padding:20px;
     }
 
     .testimonial-card h3{
@@ -1522,10 +1590,15 @@ MOBILE DEVICES
         font-size:0.95rem;
     }
 
+    .testimonial-card img{
+        width:95px;
+        height:95px;
+    }
+
     /* CTA */
 
     .cta{
-        padding:55px 25px;
+        padding:50px 22px;
     }
 
     .cta h2{
@@ -1535,16 +1608,26 @@ MOBILE DEVICES
     /* FOOTER */
 
     .footer{
+        padding:70px 5% 25px;
         text-align:center;
     }
 
     .footer-container{
         grid-template-columns:1fr;
-        gap:45px;
+        gap:40px;
     }
 
     .footer-socials{
         justify-content:center;
+    }
+
+    /* SCROLL BUTTON */
+
+    .scroll-top-btn{
+        width:50px;
+        height:50px;
+        right:20px;
+        bottom:20px;
     }
 
 }
@@ -1562,23 +1645,22 @@ SMALL MOBILE DEVICES
     /* NAVBAR */
 
     .navbar{
-        padding:12px 18px;
+        padding:10px 15px;
     }
 
     .logo-img{
-        height:50px;
+        height:48px;
     }
 
     .nav-links{
-        width:210px;
-        right:-120%;
-    }
-
-    .nav-links.active{
-        right:10px;
+        width:200px;
     }
 
     /* HERO */
+
+    .hero{
+        padding-top:120px;
+    }
 
     .hero h1{
         font-size:1.9rem;
@@ -1598,34 +1680,29 @@ SMALL MOBILE DEVICES
         font-size:1.7rem;
     }
 
-    /* IMPACT */
-
-    .impact-grid{
-        grid-template-columns:1fr;
-    }
-
-    /* PROGRAMS */
-
-    .program-card{
-        padding:28px 18px;
-    }
-
-    .program-card h3{
-        font-size:1.2rem;
-    }
-
-    /* VALUES */
-
-    .value-card{
-        padding:28px 20px;
-    }
-
     /* LEADERSHIP */
 
     .founder-card,
     .director-mini-card,
     .acted-mini-card{
+        padding:24px 18px;
+    }
+
+    .director-mini-image img{
+        width:180px;
+        height:180px;
+    }
+
+    /* VALUES */
+
+    .value-card{
         padding:25px 18px;
+    }
+
+    /* IMPACT */
+
+    .impact-grid{
+        grid-template-columns:1fr;
     }
 
     /* TESTIMONIALS */
@@ -1634,20 +1711,21 @@ SMALL MOBILE DEVICES
         font-size:1.5rem;
     }
 
-    .testimonial-card h4{
+    .testimonial-card h4,
+    .testimonial-card h5{
         font-size:1rem;
     }
 
     /* CTA */
 
     .cta h2{
-        font-size:1.7rem;
+        font-size:1.6rem;
     }
 
     /* FOOTER */
 
     .footer{
-        padding:65px 5% 20px;
+        padding:60px 5% 20px;
     }
 
 }
