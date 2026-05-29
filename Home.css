@@ -28,10 +28,6 @@
 
     /* NAVBAR */
 
-/* ==========================================
-MODERN NAVBAR
-========================================== */
-
 header{
     width:100%;
     position:fixed;
@@ -182,50 +178,6 @@ header{
     cursor:pointer;
 
     color:var(--primary);
-}
-
-/* MOBILE */
-
-@media(max-width:950px){
-
-    .nav-links{
-        position:fixed;
-
-        top:90px;
-        right:-100%;
-
-        width:280px;
-        height:auto;
-
-        background:white;
-
-        flex-direction:column;
-
-        padding:40px 30px;
-
-        border-radius:20px;
-
-        box-shadow:0 20px 40px rgba(0,0,0,0.12);
-
-        transition:0.4s ease;
-    }
-
-    .nav-links.active{
-        right:20px;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .nav-socials{
-        display:none;
-    }
-
-    .nav-btn{
-        display:none;
-    }
-
 }
 
     /* HERO SECTION */
@@ -933,7 +885,7 @@ header{
 
     .value-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
       gap:30px;
     }
 
@@ -1420,6 +1372,18 @@ MOBILE DEVICES
 ========================================= */
 
 @media screen and (max-width:768px){
+
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+      }
+      
+      html,
+      body{
+          width:100%;
+          overflow-x:hidden;
+      }
 
     section{
         padding:75px 5%;
