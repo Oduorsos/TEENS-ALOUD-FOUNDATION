@@ -434,7 +434,7 @@ header{
 
         line-height:1.7;
 
-        font-size:0.95rem;
+        font-size:0.8rem;
     }
 
     .founder-card,
@@ -503,7 +503,7 @@ header{
     }
 
     .acted-mini-content h4{
-        font-size:1.3rem;
+        font-size:0.8rem;
 
         color:var(--primary);
 
