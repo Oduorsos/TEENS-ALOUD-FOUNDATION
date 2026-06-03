@@ -641,7 +641,7 @@ const testimonials = [
     },
 
     {
-        image: "images/mario.jpg",
+        image: "images/mario.jpeg",
         message: "I joined TAF in 2023, and it has truly been one of the most impactful journeys in my life. TAF has helped me build confidence, discipline, and strong leadership skills. I have learned how to work with others, communicate effectively, and take initiative. The mentorship and opportunities provided have inspired me to aim higher in everything I do. Being part of TAF also taught me the importance of teamwork, responsibility, and service to the community. Every experience and challenge along the way has shaped me into a better and more focused individual. I am grateful to TAF for the knowledge, exposure, and leadership foundation it continues to give me.",
         name: " ~ Lloyd Mario"
     }
