@@ -1,13 +1,5 @@
-// ==========================================
-// TEENS ALOUD FOUNDATION KENYA
-// MODERN & CLEAN JAVASCRIPT FILE
-// FIXED & OPTIMIZED VERSION
-// ==========================================
 
-
-// ==========================================
 // GLOBAL ELEMENTS
-// ==========================================
 
 const header = document.querySelector("header");
 
@@ -19,10 +11,7 @@ const navMenu = document.getElementById("navLinks");
 
 const menuBtn = document.getElementById("menuBtn");
 
-
-// ==========================================
 // ACTIVE NAVIGATION LINKS
-// ==========================================
 
 window.addEventListener("scroll", () => {
 
@@ -54,10 +43,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-// ==========================================
 // HIDE / SHOW NAVBAR ON SCROLL
-// ==========================================
 
 let lastScrollTop = 0;
 
@@ -90,10 +76,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-// ==========================================
 // STICKY NAVBAR EFFECT
-// ==========================================
 
 window.addEventListener("scroll", () => {
 
@@ -113,10 +96,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-// ==========================================
 // MOBILE MENU
-// ==========================================
 
 if(menuBtn && navMenu){
 
@@ -132,10 +112,7 @@ if(menuBtn && navMenu){
 
 }
 
-
-// ==========================================
 // CLOSE MOBILE MENU WHEN LINK IS CLICKED
-// ==========================================
 
 navItems.forEach(link => {
 
@@ -153,10 +130,7 @@ navItems.forEach(link => {
 
 });
 
-
-// ==========================================
 // HERO IMAGE SLIDER
-// ==========================================
 
 const slides = document.querySelectorAll(".slide");
 
@@ -188,11 +162,7 @@ if(slides.length > 0){
 
 }
 
-
-
-// ==========================================
 // ABOUT SECTION ANIMATION
-// ==========================================
 
 const aboutImage =
     document.querySelector(".about img");
@@ -234,9 +204,7 @@ window.addEventListener(
 
 animateAboutSection();
 
-// ==========================================
 // SUB CARDS ANIMATION
-// ==========================================
 
 const SUBCards =
     document.querySelectorAll(".SUB-card");
@@ -272,10 +240,7 @@ window.addEventListener(
 
 animateSUBCards();
 
-
-// ==========================================
 // PROGRAM CARDS ANIMATION
-// ==========================================
 
 const programCards =
     document.querySelectorAll(".program-card");
@@ -311,9 +276,7 @@ window.addEventListener(
 
 animateProgramCards();
 
-// ======================================
 // PROGRAMS SLIDER
-// ======================================
 
 const programTrack =
     document.querySelector(".program-track");
@@ -429,9 +392,7 @@ window.addEventListener(
 
 updateProgramSlider();
 
-// ==========================================
 // LEADERSHIP SECTION ANIMATION
-// ==========================================
 
 const founderCard =
     document.querySelector(".founder-card");
@@ -507,9 +468,7 @@ window.addEventListener(
 
 animateLeadershipSection();
 
-// ==========================================
 // VISION & MISSION ANIMATION
-// ==========================================
 
 const visionCards =
     document.querySelectorAll(
@@ -547,9 +506,7 @@ window.addEventListener(
 
 animateVisionMission();
 
-// ==========================================
 // VALUE CARDS ANIMATION
-// ==========================================
 
 const valueCards =
     document.querySelectorAll(".value-card");
@@ -585,9 +542,7 @@ window.addEventListener(
 
 animatevalueCards();
 
-// ==========================================
 // SCROLL REVEAL ANIMATION
-// ==========================================
 
 const revealElements = document.querySelectorAll(
     ".program-card, .about, .impact-box, .director-container, .testimonial-card, .cta"
@@ -615,10 +570,7 @@ window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
 
-
-// ==========================================
 // TESTIMONIAL SLIDER
-// ==========================================
 
 const testimonials = [
 
@@ -741,10 +693,7 @@ if(testimonialCard){
 
 }
 
-
-// ==========================================
 // IMPACT COUNTER ANIMATION
-// ==========================================
 
 const counters =
     document.querySelectorAll(".impact-box h3");
@@ -810,10 +759,8 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-// ==========================================
 // BUTTON RIPPLE EFFECT
-// ==========================================
+
 
 const buttons = document.querySelectorAll(".btn");
 
@@ -847,10 +794,7 @@ buttons.forEach(button => {
 
 });
 
-
-// ==========================================
 // PROGRAM CARD HOVER EFFECT
-// ==========================================
 
 const cards =
     document.querySelectorAll(".program-card");
@@ -894,10 +838,7 @@ cards.forEach(card => {
 
 });
 
-
-// ==========================================
 // HERO TEXT ANIMATION
-// ==========================================
 
 const heroContent =
     document.querySelector(".hero-content");
@@ -945,9 +886,8 @@ images.forEach(image => {
 
 });
 
-// =========================
+
 // SCROLL TO TOP BUTTON
-// =========================
 
 const scrollBtn =
     document.querySelector(".scroll-top-btn");
