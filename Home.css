@@ -1481,7 +1481,7 @@ CONTACT PAGE
 ========================================= */
 
 .contact-page{
-    margin:100px;
+    padding:140px 10%;
     background:var(--light);
 }
 
