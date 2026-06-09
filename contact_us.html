@@ -333,6 +333,40 @@
 
     <script>
 
+        // MOBILE MENU
+        
+        if(menuBtn && navMenu){
+        
+            menuBtn.addEventListener("click", () => {
+        
+                navMenu.classList.toggle("active");
+        
+                menuBtn.innerHTML = navMenu.classList.contains("active")
+                    ? `<i class="bi bi-x-lg"></i>`
+                    : `☰`;
+        
+            });
+        
+        }
+        
+        // CLOSE MOBILE MENU WHEN LINK IS CLICKED
+        
+        navItems.forEach(link => {
+        
+            link.addEventListener("click", () => {
+        
+                if(navMenu){
+                    navMenu.classList.remove("active");
+                }
+        
+                if(menuBtn){
+                    menuBtn.innerHTML = `☰`;
+                }
+        
+            });
+        
+        });
+
         const contactCards =
             document.querySelectorAll(".contact-card");
 
